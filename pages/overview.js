@@ -10,7 +10,7 @@ import WeekPieChart from "./weekPiechart";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Overview({ budget }) {
   const username = "Xavier";
   const currentTime = new Date();
   const hours = currentTime.getHours();
@@ -35,13 +35,12 @@ export default function Home() {
         <Link href="/.." className={styles.navigate}>
           Back to Homepage
         </Link>
-        <h1 className={styles.greeting}>{`${greeting}, ${username}`}</h1>
+        <h2 className={styles.greeting}>{`${greeting}, ${username}`}</h2>
         <div className={styles.description}>
           <h2 className={styles.pieChartTitle}>
             Here's a breakdown of your spending this week:
           </h2>
           <div className={styles.pieChartContainer}>
-
             <div className={styles.pieChart}>
               <WeekPieChart />
             </div>
