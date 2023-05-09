@@ -46,19 +46,19 @@ export default function Home() {
                     block
                     className="py-4 rounded-0 font-weight-bold"
                   >
-                    Track Your Expenses
+                    Manage Your Expenses
                   </Button>
                 </Link>
               </Col>
               <Col md={4}>
-                <Link href="/transactions">
+                <Link href="/budget">
                   <Button
                     variant="outline-secondary"
                     size="lg"
                     block
                     className="py-4 rounded-0 font-weight-bold"
                   >
-                    Add/Modify Your Transactions
+                    Set a Budget Goal
                   </Button>
                 </Link>
               </Col>

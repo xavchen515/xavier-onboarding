@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function AddTransaction() {
   const [description, setDescription] = useState("");
-  const [label, setLabel] = useState("entertainment");
+  const [label, setLabel] = useState("dining");
   const [amount, setAmount] = useState(0);
 
   const handleSubmit = (event) => {
@@ -17,7 +17,7 @@ export default function AddTransaction() {
 
     // Clear the form inputs after submission
     setDescription("");
-    setLabel("entertainment");
+    setLabel("dining");
     setAmount(0);
   };
 

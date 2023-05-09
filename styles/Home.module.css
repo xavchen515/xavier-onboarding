@@ -219,12 +219,11 @@
 
 .chartContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .chart {
-  width: 50%;
+  width: 48%;
 }
 
 .bar {
@@ -241,10 +240,6 @@
 
 .customtable th {
   background-color: #f2f2f2;
-}
-
-.description {
-  width: 40%;
 }
 
 .label {
@@ -294,27 +289,20 @@
   color: #004ba0;
 }
 
-.welcome {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
 .greeting {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .pieChartTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 2rem 0;
   text-align: center;
   font-size: 18px;
 }
-
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -364,22 +352,6 @@
     height: 300px;
   }
 
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
   .description p {
     align-items: center;
     inset: 0 0 auto;
@@ -394,20 +366,6 @@
     );
     background-clip: padding-box;
     backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
   }
 }
 

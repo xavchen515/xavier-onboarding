@@ -25,6 +25,9 @@ const Expenses = () => {
       </Head>
       <div className={styles.expensesHeader}>
         <h2 className={styles.center}>Expenses</h2>
+        <Link href="../transactions/" className={styles.navigate}>
+          Add Transaction
+        </Link>
         <Link href="/" className={styles.navigate}>
           Back to Homepage
         </Link>
