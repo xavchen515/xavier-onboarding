@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { expenses, data, deleteTransaction } from "./tracker";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 const Expenses = () => {
+  const [expensesList, setExpensesList] = useState(expenses);
+
   const handleDelete = (index) => {
     deleteTransaction(index);
-    // Force re-render of the component to reflect changes
-    window.location.reload();
+    setExpensesList([...expenses]);
   };
 
   return (
@@ -39,7 +41,7 @@ const Expenses = () => {
             </tr>
           </thead>
           <tbody>
-            {expenses.map((expense, index) => (
+            {expensesList.map((expense, index) => (
               <tr key={index}>
                 <td className={styles.description}>{expense.description}</td>
                 <td className={styles.label}>{expense.label}</td>
