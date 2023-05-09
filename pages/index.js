@@ -1,6 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,27 +11,63 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <main className={styles.body}>
-        <div className={styles.homepage}>
-        <img src="/favicon.ico"/>
-          <h1 className={styles.title}>Fintrack</h1>
-          <h2 className={styles.subtitle}>Manage Your Finances with Ease</h2>
-          <div className={styles.btncontainer}>
-            <Link href="/overview">
-              Go to Overview
-            </Link>
-            <Link href="/expenses">
-              Track Your Expenses
-            </Link>
-            <Link href="/transactions">
-              Add/Modify Your Transactions
-            </Link>
-          </div>
+      <main>
+        <div className="d-flex flex-column justify-content-center align-items-center text-center bg-light vh-100">
+          <h1 className="display-4 font-weight-bold">Fintrack</h1>
+          <h2 className="text-muted mb-5">
+            Manage Your Finances with Ease
+          </h2>
+          <Container>
+            <Row className="mb-3">
+              <Col md={4}>
+                <Link href="/overview">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    block
+                    className="py-4 rounded-0 font-weight-bold"
+                  >
+                    Go to Overview
+                  </Button>
+                </Link>
+              </Col>
+              <Col md={4}>
+                <Link href="/expenses">
+                  <Button
+                    variant="outline-secondary"
+                    size="lg"
+                    block
+                    className="py-4 rounded-0 font-weight-bold"
+                  >
+                    Track Your Expenses
+                  </Button>
+                </Link>
+              </Col>
+              <Col md={4}>
+                <Link href="/transactions">
+                  <Button
+                    variant="outline-secondary"
+                    size="lg"
+                    block
+                    className="py-4 rounded-0 font-weight-bold"
+                  >
+                    Add/Modify Your Transactions
+                  </Button>
+                </Link>
+              </Col>
+            </Row>
+          </Container>
+          <p className="text-muted mt-auto py-3">
+            Made with ❤️ by Xavier
+          </p>
         </div>
-        <div className={styles.credits}>Made with ❤️ by Xavier</div>
       </main>
     </>
   );

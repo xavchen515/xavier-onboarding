@@ -1,9 +1,15 @@
-import { expenses, data } from "./tracker";
+import { expenses, data, deleteTransaction } from "./tracker";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 const Expenses = () => {
+  const handleDelete = (index) => {
+    deleteTransaction(index);
+    // Force re-render of the component to reflect changes
+    window.location.reload();
+  };
+
   return (
     <div>
       <Head>
@@ -17,7 +23,7 @@ const Expenses = () => {
       </Head>
       <div className={styles.expensesHeader}>
         <h2 className={styles.center}>Expenses</h2>
-        <Link href="/.." className={styles.navigate}>
+        <Link href="/" className={styles.navigate}>
           Back to Homepage
         </Link>
       </div>
@@ -29,6 +35,7 @@ const Expenses = () => {
               <th className={styles.label}>Label</th>
               <th className={styles.amount}>Amount</th>
               <th className={styles.timestamp}>Timestamp</th>
+              <th className={styles.action}>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -39,6 +46,9 @@ const Expenses = () => {
                 <td className={styles.amount}>{expense.amount}</td>
                 <td className={styles.timestamp}>
                   {new Date(expense.timestamp).toLocaleString()}
+                </td>
+                <td className={styles.action}>
+                  <button onClick={() => handleDelete(index)}>Delete</button>
                 </td>
               </tr>
             ))}

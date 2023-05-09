@@ -31,7 +31,15 @@ export const piedata = [
   {
     label: "",
     data: [8, 12, 15, 8, 3, 0, 15],
-    backgroundColor: ['red', 'blue', 'yellow', 'green', 'orange', 'purple', 'grey'],
+    backgroundColor: [
+      "red",
+      "blue",
+      "yellow",
+      "green",
+      "orange",
+      "purple",
+      "grey",
+    ],
   },
 ];
 
@@ -45,45 +53,24 @@ export function addTransaction(description, label, amount) {
   switch (label) {
     case "dining":
       data[0].data[0] += amount;
-      weekdata[0].data[0] += amount;
-      monthdata[1].data[0] += amount;
-      piedata[0].data[0] += amount;
       break;
     case "entertainment":
       data[0].data[1] += amount;
-      weekdata[0].data[1] += amount;
-      monthdata[1].data[1] += amount;
-      piedata[0].data[1] += amount;
       break;
     case "groceries":
       data[0].data[2] += amount;
-      weekdata[0].data[2] += amount;
-      monthdata[1].data[2] += amount;
-      piedata[0].data[2] += amount;
       break;
     case "care":
       data[0].data[3] += amount;
-      weekdata[0].data[3] += amount;
-      monthdata[1].data[3] += amount;
-      piedata[0].data[3] += amount;
       break;
     case "transportation":
       data[0].data[4] += amount;
-      weekdata[0].data[4] += amount;
-      monthdata[1].data[4] += amount;
-      piedata[0].data[4] += amount;
       break;
     case "utilities":
       data[0].data[5] += amount;
-      weekdata[0].data[5] += amount;
-      monthdata[1].data[5] += amount;
-      piedata[0].data[5] += amount;
       break;
     case "others":
       data[0].data[6] += amount;
-      weekdata[0].data[6] += amount;
-      monthdata[1].data[6] += amount;
-      piedata[0].data[6] += amount;
       break;
     default:
       break;
@@ -91,4 +78,38 @@ export function addTransaction(description, label, amount) {
 
   // Add the transaction to the expenses array
   expenses.push(transaction);
+}
+
+export function deleteTransaction(index) {
+  const transaction = expenses[index];
+
+  // Update the data array with the label and amount of the transaction
+  switch (transaction.label) {
+    case "dining":
+      data[0].data[0] -= transaction.amount;
+      break;
+    case "entertainment":
+      data[0].data[1] -= transaction.amount;
+      break;
+    case "groceries":
+      data[0].data[2] -= transaction.amount;
+      break;
+    case "care":
+      data[0].data[3] -= transaction.amount;
+      break;
+    case "transportation":
+      data[0].data[4] -= transaction.amount;
+      break;
+    case "utilities":
+      data[0].data[5] -= transaction.amount;
+      break;
+    case "others":
+      data[0].data[6] -= transaction.amount;
+      break;
+    default:
+      break;
+  }
+
+  // Remove the transaction from the expenses array
+  expenses.splice(index, 1);
 }
