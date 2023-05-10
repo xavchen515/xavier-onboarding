@@ -81,10 +81,10 @@ export default function AddTransaction() {
 
         <div className={styles.formGroup}>
           <label htmlFor="amount" className={styles.label}>
-            Amount:{" "}
+            Amount:{""}
           </label>
           <input
-            type="tel" // use the tel type to remove the leading zeros
+            type="number"
             step="0.01" // allow decimals to the hundredths place
             id="amount"
             className={styles.inputField}
