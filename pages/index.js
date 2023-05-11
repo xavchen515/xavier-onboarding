@@ -25,8 +25,8 @@ export default function Home() {
             Manage Your Finances with Ease
           </h2>
           <Container>
-            <Row className="mb-3">
-              <Col md={4}>
+            <Row className="justify-content-center">
+              <Col md={4} className="text-center mb-3">
                 <Link href="/overview">
                   <Button
                     variant="primary"
@@ -38,7 +38,7 @@ export default function Home() {
                   </Button>
                 </Link>
               </Col>
-              <Col md={4}>
+              <Col md={4} className="text-center mb-3">
                 <Link href="/expenses">
                   <Button
                     variant="outline-secondary"
@@ -47,18 +47,6 @@ export default function Home() {
                     className="py-4 rounded-0 font-weight-bold"
                   >
                     Manage Your Expenses
-                  </Button>
-                </Link>
-              </Col>
-              <Col md={4}>
-                <Link href="/budget">
-                  <Button
-                    variant="outline-secondary"
-                    size="lg"
-                    block
-                    className="py-4 rounded-0 font-weight-bold"
-                  >
-                    Set a Budget Goal
                   </Button>
                 </Link>
               </Col>
