@@ -20,41 +20,45 @@ export default function Home() {
       </Head>
       <main>
         <div className="d-flex flex-column justify-content-center align-items-center text-center bg-light vh-100">
-          <h1 className="display-4 font-weight-bold">Fintrack</h1>
-          <h2 className="text-muted mb-5">
-            Manage Your Finances with Ease
-          </h2>
-          <Container>
-            <Row className="justify-content-center">
-              <Col md={4} className="text-center mb-3">
-                <Link href="/overview">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    block
-                    className="py-4 rounded-0 font-weight-bold"
-                  >
-                    Go to Overview
-                  </Button>
-                </Link>
-              </Col>
-              <Col md={4} className="text-center mb-3">
-                <Link href="/expenses">
-                  <Button
-                    variant="outline-secondary"
-                    size="lg"
-                    block
-                    className="py-4 rounded-0 font-weight-bold"
-                  >
-                    Manage Your Expenses
-                  </Button>
-                </Link>
+          <Container className="h-100">
+            <Row className="justify-content-center align-items-center h-100">
+              <Col>
+                <h1 className="display-4 font-weight-bold">Fintrack</h1>
+                <h2 className="text-muted mb-5">
+                  Manage Your Finances with Ease
+                </h2>
+                <Container>
+                  <Row className="justify-content-center">
+                    <Col md={4} className="text-center mb-3">
+                      <Link href="/overview">
+                        <Button
+                          variant="primary"
+                          size="lg"
+                          block
+                          className="py-4 rounded-0 font-weight-bold"
+                        >
+                          Go to Overview
+                        </Button>
+                      </Link>
+                    </Col>
+                    <Col md={4} className="text-center mb-3">
+                      <Link href="/expenses">
+                        <Button
+                          variant="outline-secondary"
+                          size="lg"
+                          block
+                          className="py-4 rounded-0 font-weight-bold"
+                        >
+                          Manage Your Expenses
+                        </Button>
+                      </Link>
+                    </Col>
+                  </Row>
+                </Container>
+                <p className="text-muted mt-auto py-3">Made with ❤️ by Xavier</p>
               </Col>
             </Row>
           </Container>
-          <p className="text-muted mt-auto py-3">
-            Made with ❤️ by Xavier
-          </p>
         </div>
       </main>
     </>
