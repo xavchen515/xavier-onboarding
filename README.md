@@ -4,7 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Install the node_modules by running npm install in the terminal.
+
+To run the development server:
 
 ```bash
 npm run dev
@@ -13,5 +15,3 @@ yarn dev
 # or
 pnpm dev
 ```
-
-Install the node_modules by running npm install in the terminal.
